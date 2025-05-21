@@ -13,28 +13,28 @@
     --card-foreground: 240 10% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 10%;
-    --primary: 265 89% 74%;
+    --primary: 24 100% 50%; /* Orange */
     --primary-foreground: 0 0% 100%;
-    --secondary: 265 65% 55%;
+    --secondary: 15 80% 45%; /* Red-Orange */
     --secondary-foreground: 0 0% 100%;
     --muted: 240 5% 96%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 225 80% 59%;
+    --accent: 28 90% 55%; /* Golden-Orange */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 265 89% 74%;
+    --ring: 24 100% 50%; /* Match primary */
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 24 100% 50%; /* Orange */
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 24 100% 50%; /* Match primary */
     --success: 142 69% 58%;
     --success-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
@@ -42,7 +42,7 @@
   }
 
   .dark {
-    /* Corrected dark theme variables (red/orange accents) */
+    /* Fitness-themed dark theme variables */
     /* Base */
     --background: 0 0% 0%; /* Pure Black */
     --foreground: 240 5% 85%; /* Lighter gray text #d4d4d6 */
@@ -55,20 +55,20 @@
     --popover: 240 4% 8% / 0.9;
     --popover-foreground: 240 5% 85%;
     
-    /* Primary - Deep Red/Orange */
-    --primary: 15 80% 55%; /* #d95f3b */
+    /* Primary - Energetic Orange */
+    --primary: 24 100% 50%; /* #ff8000 */
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Muted version of primary */
-    --secondary: 15 60% 40%; /* #a64d30 */
+    /* Secondary - Deep Red-Orange */
+    --secondary: 15 80% 45%; /* #cb4a24 */
     --secondary-foreground: 0 0% 100%;
     
     /* Muted */
     --muted: 240 3.7% 11%; 
     --muted-foreground: 240 5% 55%; /* Darker muted text */
     
-    /* Accent - Brighter version of primary */
-    --accent: 15 85% 65%; /* #e87a57 */
+    /* Accent - Golden Orange */
+    --accent: 28 90% 55%; /* #f29e37 */
     --accent-foreground: 0 0% 100%;
     
     /* Destructive - Standard red */
@@ -78,17 +78,17 @@
     /* Border - Subtle dark border */
     --border: 240 3.7% 15.9% / 0.5; /* hsla(240, 3.7%, 15.9%, 0.5) */
     --input: 240 3.7% 15.9%;
-    --ring: 15 80% 55%; /* Match primary */
+    --ring: 24 100% 50%; /* Match primary */
 
-    /* Sidebar variables (kept as is, adjust if needed) */
+    /* Sidebar variables */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%; /* Consider changing this to match primary */
+    --sidebar-primary: 24 100% 50%; /* Orange to match primary */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%; /* Consider changing this to match ring */
+    --sidebar-ring: 24 100% 50%; /* Match primary */
     
     --success: 142 69% 58%;
     --success-foreground: 0 0% 100%;
@@ -96,8 +96,6 @@
     --warning-foreground: 0 0% 100%;
   }
 }
-
-/* Removed the extra @layer base block that was here */
 
 @layer base {
   * {
@@ -120,44 +118,26 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-/* Removed gradient-move animation */
-
-/* Pulse-glow animation (kept as is) */
+/* Pulse-glow animation */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 5px 1px rgba(217, 95, 59, 0.2), 0 0 8px 2px rgba(217, 95, 59, 0.15); } /* Adjusted to red/orange */
-  50% { box-shadow: 0 0 10px 3px rgba(217, 95, 59, 0.3), 0 0 16px 4px rgba(217, 95, 59, 0.25); } /* Adjusted to red/orange */
+  0%, 100% { box-shadow: 0 0 5px 1px rgba(255, 128, 0, 0.2), 0 0 8px 2px rgba(255, 128, 0, 0.15); } /* Orange glow */
+  50% { box-shadow: 0 0 10px 3px rgba(255, 128, 0, 0.3), 0 0 16px 4px rgba(255, 128, 0, 0.25); } /* Intensified orange glow */
 }
 
 .hover\:animate-pulse-glow:hover {
   animation: pulse-glow 1.5s infinite ease-in-out;
 }
 
-/* Removed energy-flow animation and related classes */
-
 /* Static background image class for the main app */
 .main-background-image {
   background-image: 
-    linear-gradient(rgba(10, 5, 5, 0.75), rgba(10, 5, 5, 0.85)), /* Dark reddish overlay */
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), /* Dark overlay */
     url('https://c1.wallpaperflare.com/preview/104/104/998/man-male-boy-a-person.jpg');
   background-size: cover; 
   background-position: center center; 
   background-repeat: no-repeat;
   background-attachment: fixed; /* Keep the background fixed during scroll */
 }
-
-/* Static background image class */
-/* REMOVE the .bg-fitness-image class definition entirely */
-/* 
-.bg-fitness-image {
-  background-image: 
-    linear-gradient(rgba(10, 10, 15, 0.8), rgba(10, 10, 15, 0.9)),
-    url('...');
-  background-size: cover; 
-  background-position: center center; 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-*/
 
 /* Custom animations for login/signup */
 @keyframes fadeIn {

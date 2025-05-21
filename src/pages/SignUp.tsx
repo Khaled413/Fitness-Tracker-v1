@@ -182,7 +182,7 @@ const SignUp = () => {
     return (
       <>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '200ms' }}>
-          <Label htmlFor="fullName" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Full Name</Label>
+          <Label htmlFor="fullName" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Full Name</Label>
           <Input
             id="fullName"
             type="text"
@@ -190,11 +190,11 @@ const SignUp = () => {
             value={userData.fullName}
             onChange={(e) => handleChange("fullName", e.target.value)}
             required
-            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg font-medium"
+            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg font-medium"
           />
         </div>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '300ms' }}>
-          <Label htmlFor="email" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Email</Label>
+          <Label htmlFor="email" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Email</Label>
           <Input
             id="email"
             type="email"
@@ -202,11 +202,11 @@ const SignUp = () => {
             value={userData.email}
             onChange={(e) => handleChange("email", e.target.value)}
             required
-            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg font-medium"
+            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg font-medium"
           />
         </div>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '400ms' }}>
-          <Label htmlFor="password" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Password</Label>
+          <Label htmlFor="password" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Password</Label>
           <Input
             id="password"
             type="password"
@@ -214,11 +214,11 @@ const SignUp = () => {
             value={userData.password}
             onChange={(e) => handleChange("password", e.target.value)}
             required
-            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg font-medium"
+            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg font-medium"
           />
         </div>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '500ms' }}>
-          <Label htmlFor="confirmPassword" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Confirm Password</Label>
+          <Label htmlFor="confirmPassword" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Confirm Password</Label>
           <Input
             id="confirmPassword"
             type="password"
@@ -226,12 +226,12 @@ const SignUp = () => {
             value={userData.confirmPassword}
             onChange={(e) => handleChange("confirmPassword", e.target.value)}
             required
-            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg font-medium"
+            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg font-medium"
           />
         </div>
         <Button 
           type="button" 
-          className="w-full mt-6 bg-gradient-to-r from-[#f97315] to-[#f97315] hover:from-[#ea6805] hover:to-[#ff8c3b] text-white font-medium shadow-md hover:shadow-xl transition-all animate-slideUpFadeIn"
+          className="w-full mt-6 bg-gradient-to-r from-[#ff8000] to-[#ff8000] hover:from-[#f29e37] hover:to-[#f29e37] text-white font-medium shadow-md hover:shadow-xl transition-all animate-slideUpFadeIn"
           style={{ animationDelay: '600ms' }}
           onClick={handleAccountStepNext}
         >
@@ -245,12 +245,12 @@ const SignUp = () => {
     return (
       <>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '200ms' }}>
-          <Label htmlFor="gender" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Gender</Label>
+          <Label htmlFor="gender" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Gender</Label>
           <Select 
             value={userData.gender} 
             onValueChange={(value) => handleChange("gender", value)}
           >
-            <SelectTrigger id="gender" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#f97315] shadow-md hover:shadow-lg transition-all">
+            <SelectTrigger id="gender" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#ff8000] shadow-md hover:shadow-lg transition-all">
               <SelectValue placeholder="Select your gender" />
             </SelectTrigger>
             <SelectContent className="bg-[#2e333d] border-[#444] text-gray-200">
@@ -260,19 +260,19 @@ const SignUp = () => {
           </Select>
         </div>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '300ms' }}>
-          <Label htmlFor="dateOfBirth" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Date of Birth</Label>
+          <Label htmlFor="dateOfBirth" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Date of Birth</Label>
           <Input
             id="dateOfBirth"
             type="date"
             value={userData.dateOfBirth}
             onChange={(e) => handleChange("dateOfBirth", e.target.value)}
             required
-            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg font-medium"
+            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg font-medium"
           />
         </div>
         <div className="grid grid-cols-2 gap-4 animate-slideUpFadeIn" style={{ animationDelay: '400ms' }}>
           <div className="space-y-1.5 group">
-            <Label htmlFor="height" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Height (cm)</Label>
+            <Label htmlFor="height" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Height (cm)</Label>
             <Input
               id="height"
               type="number"
@@ -280,11 +280,11 @@ const SignUp = () => {
               value={userData.height}
               onChange={(e) => handleChange("height", e.target.value)}
               required
-              className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg font-medium"
+              className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg font-medium"
             />
           </div>
           <div className="space-y-1.5 group">
-            <Label htmlFor="weight" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Weight (kg)</Label>
+            <Label htmlFor="weight" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Weight (kg)</Label>
             <Input
               id="weight"
               type="number"
@@ -292,7 +292,7 @@ const SignUp = () => {
               value={userData.weight}
               onChange={(e) => handleChange("weight", e.target.value)}
               required
-              className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg font-medium"
+              className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg font-medium"
             />
           </div>
         </div>
@@ -300,14 +300,14 @@ const SignUp = () => {
           <Button 
             type="button" 
             variant="outline" 
-            className="flex-1 border-[#f97315] text-[#f97315] hover:bg-[#f97315]/10 transition-colors shadow-md"
+            className="flex-1 border-[#ff8000] text-[#ff8000] hover:bg-[#ff8000]/10 transition-colors shadow-md"
             onClick={handlePersonalStepPrevious}
           >
             Previous
           </Button>
           <Button 
             type="button" 
-            className="flex-1 bg-gradient-to-r from-[#f97315] to-[#f97315] hover:from-[#ea6805] hover:to-[#ff8c3b] text-white font-medium shadow-md hover:shadow-xl transition-all"
+            className="flex-1 bg-gradient-to-r from-[#ff8000] to-[#ff8000] hover:from-[#f29e37] hover:to-[#f29e37] text-white font-medium shadow-md hover:shadow-xl transition-all"
             onClick={handlePersonalStepNext}
           >
             Next
@@ -321,12 +321,12 @@ const SignUp = () => {
     return (
       <>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '200ms' }}>
-          <Label htmlFor="fitnessLevel" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Fitness Level</Label>
+          <Label htmlFor="fitnessLevel" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Fitness Level</Label>
           <Select 
             value={userData.fitnessLevel} 
             onValueChange={(value) => handleChange("fitnessLevel", value)}
           >
-            <SelectTrigger id="fitnessLevel" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#f97315] shadow-md hover:shadow-lg transition-all">
+            <SelectTrigger id="fitnessLevel" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#ff8000] shadow-md hover:shadow-lg transition-all">
               <SelectValue placeholder="Select your fitness level" />
             </SelectTrigger>
             <SelectContent className="bg-[#2e333d] border-[#444] text-gray-200">
@@ -338,12 +338,12 @@ const SignUp = () => {
           </Select>
         </div>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '300ms' }}>
-          <Label htmlFor="fitnessGoal" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Fitness Goal</Label>
+          <Label htmlFor="fitnessGoal" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Fitness Goal</Label>
           <Select 
             value={userData.fitnessGoal} 
             onValueChange={(value) => handleChange("fitnessGoal", value)}
           >
-            <SelectTrigger id="fitnessGoal" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#f97315] shadow-md hover:shadow-lg transition-all">
+            <SelectTrigger id="fitnessGoal" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#ff8000] shadow-md hover:shadow-lg transition-all">
               <SelectValue placeholder="Select your primary goal" />
             </SelectTrigger>
             <SelectContent className="bg-[#2e333d] border-[#444] text-gray-200">
@@ -357,12 +357,12 @@ const SignUp = () => {
           </Select>
         </div>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '400ms' }}>
-          <Label htmlFor="activityLevel" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Daily Activity Level</Label>
+          <Label htmlFor="activityLevel" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Daily Activity Level</Label>
           <Select 
             value={userData.activityLevel} 
             onValueChange={(value) => handleChange("activityLevel", value)}
           >
-            <SelectTrigger id="activityLevel" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#f97315] shadow-md hover:shadow-lg transition-all">
+            <SelectTrigger id="activityLevel" className="w-full bg-[#2e333d] border-0 focus:ring-1 focus:ring-[#ff8000] shadow-md hover:shadow-lg transition-all">
               <SelectValue placeholder="Select your activity level" />
             </SelectTrigger>
             <SelectContent className="bg-[#2e333d] border-[#444] text-gray-200">
@@ -375,27 +375,27 @@ const SignUp = () => {
           </Select>
         </div>
         <div className="space-y-1.5 group animate-slideUpFadeIn" style={{ animationDelay: '500ms' }}>
-          <Label htmlFor="healthConditions" className="text-sm font-normal text-gray-300 group-focus-within:text-[#f97315] transition-colors">Health Conditions (if any)</Label>
+          <Label htmlFor="healthConditions" className="text-sm font-normal text-gray-300 group-focus-within:text-[#ff8000] transition-colors">Health Conditions (if any)</Label>
           <Textarea
             id="healthConditions"
             placeholder="Please list any health conditions or injuries we should be aware of"
             value={userData.healthConditions}
             onChange={(e) => handleChange("healthConditions", e.target.value)}
-            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#f97315] transition-all shadow-md hover:shadow-lg min-h-[80px] font-medium"
+            className="bg-[#2e333d] border-0 focus-visible:ring-1 focus-visible:ring-[#ff8000] transition-all shadow-md hover:shadow-lg min-h-[80px] font-medium"
           />
         </div>
         <div className="flex gap-4 mt-6 animate-slideUpFadeIn" style={{ animationDelay: '600ms' }}>
           <Button 
             type="button" 
             variant="outline" 
-            className="flex-1 border-[#f97315] text-[#f97315] hover:bg-[#f97315]/10 transition-colors shadow-md"
+            className="flex-1 border-[#ff8000] text-[#ff8000] hover:bg-[#ff8000]/10 transition-colors shadow-md"
             onClick={handleFitnessStepPrevious}
           >
             Previous
           </Button>
           <Button 
             type="button" 
-            className="flex-1 bg-gradient-to-r from-[#f97315] to-[#f97315] hover:from-[#ea6805] hover:to-[#ff8c3b] text-white font-medium shadow-md hover:shadow-xl transition-all"
+            className="flex-1 bg-gradient-to-r from-[#ff8000] to-[#ff8000] hover:from-[#f29e37] hover:to-[#f29e37] text-white font-medium shadow-md hover:shadow-xl transition-all"
             onClick={handleCompleteRegistration}
             disabled={isLoading}
           >
@@ -429,9 +429,9 @@ const SignUp = () => {
               key={step.id}
               className={`text-center px-4 py-2.5 rounded-md transition-all duration-300 ${
                 currentStep === step.id
-                  ? "bg-gradient-to-r from-[#f97315] to-[#ff8c3b] text-white shadow-md"
+                  ? "bg-gradient-to-r from-[#ff8000] to-[#f29e37] text-white shadow-md"
                   : "bg-[#2e333d] text-gray-400"
-              } ${currentStep !== step.id && index < steps.findIndex(s => s.id === currentStep) ? "bg-[#2e333d]/80 text-[#f97315]" : ""}`}
+              } ${currentStep !== step.id && index < steps.findIndex(s => s.id === currentStep) ? "bg-[#2e333d]/80 text-[#ff8000]" : ""}`}
             >
               {step.label}
             </div>
@@ -444,23 +444,23 @@ const SignUp = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-black overflow-hidden">
       {/* Enhanced background with animated gradient overlay */}
-      <div className="fixed inset-0 -z-10 main-background-image after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-[#000000]/60 after:via-[#121212]/70 after:to-[#f97315]/10"></div>
+      <div className="fixed inset-0 -z-10 main-background-image after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-[#000000]/60 after:via-[#121212]/70 after:to-[#ff8000]/10"></div>
       
       {/* Animated fitness-themed elements in the background */}
       <div className="fixed inset-0 -z-5 overflow-hidden pointer-events-none">
-        <div className="absolute top-[15%] left-[10%] w-24 h-24 rounded-full bg-gradient-to-br from-[#f97315]/20 to-[#f97315]/5 blur-xl animate-pulse"></div>
-        <div className="absolute bottom-[20%] right-[15%] w-32 h-32 rounded-full bg-gradient-to-br from-[#f97315]/15 to-[#f97315]/5 blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-[40%] right-[8%] w-16 h-16 rounded-full bg-gradient-to-br from-[#f97315]/20 to-[#f97315]/5 blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[15%] left-[10%] w-24 h-24 rounded-full bg-gradient-to-br from-[#ff8000]/20 to-[#ff8000]/5 blur-xl animate-pulse"></div>
+        <div className="absolute bottom-[20%] right-[15%] w-32 h-32 rounded-full bg-gradient-to-br from-[#ff8000]/15 to-[#ff8000]/5 blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-[40%] right-[8%] w-16 h-16 rounded-full bg-gradient-to-br from-[#ff8000]/20 to-[#ff8000]/5 blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
       {/* Improved card with better visual effects */}
       <Card className="w-full max-w-lg bg-[#1e1e1e]/70 border-0 shadow-[0_8px_30px_rgb(0,0,0,0.6)] backdrop-blur-md rounded-xl overflow-hidden animate-fadeIn">
         {/* Card accent top line */}
-        <div className="h-1 w-full bg-gradient-to-r from-[#f97315] via-[#ff9b5e] to-[#f97315]"></div>
+        <div className="h-1 w-full bg-gradient-to-r from-[#ff8000] via-[#f29e37] to-[#ff8000]"></div>
         
         <CardHeader className="text-center pt-8 pb-4 px-8">
           <div className="flex justify-center mb-4 animate-logoFloat">
-            <Dumbbell className="h-14 w-14 text-[#f97315]" />
+            <Dumbbell className="h-14 w-14 text-[#ff8000]" />
           </div>
           <CardTitle className="text-3xl font-medium mb-2 text-white">Create an account</CardTitle>
           <CardDescription className="text-gray-400 text-base">Enter your information to get started with your fitness journey</CardDescription>
@@ -476,7 +476,7 @@ const SignUp = () => {
           <div className="text-center mt-6 animate-fadeIn">
             <p className="text-sm text-gray-400">
               Already have an account?{" "}
-              <Link to="/login" className="text-[#f97315] hover:text-[#ff8c3b] hover:underline transition-colors font-medium">
+              <Link to="/login" className="text-[#ff8000] hover:text-[#f29e37] hover:underline transition-colors font-medium">
                 Login
               </Link>
             </p>
