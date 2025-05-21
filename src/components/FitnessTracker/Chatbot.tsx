@@ -174,16 +174,16 @@ export default function Chatbot() {
       )}
       {open && (
         <div 
-          className="fixed bottom-6 right-6 z-50 w-80 max-w-[90vw] bg-card border border-white/10 rounded-xl shadow-2xl flex flex-col transition-all duration-300 ease-out overflow-hidden" // Added border, overflow-hidden
+          className="fixed bottom-6 right-6 z-50 w-80 max-w-[90vw] bg-card border border-white/10 rounded-xl shadow-2xl flex flex-col transition-all duration-300 ease-out overflow-hidden"
           style={{
-            backgroundImage: `linear-gradient(rgba(10, 5, 5, 0.65), rgba(10, 5, 5, 0.65)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST25vZzhlUORJgddBzGPxEzMLuNBsnfYtJ8bAgxb-UvcI0TH99PPT_NhbvaMw0RZyIHRI&usqp=CAU')`, // Updated URL
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST25vZzhlUORJgddBzGPxEzMLuNBsnfYtJ8bAgxb-UvcI0TH99PPT_NhbvaMw0RZyIHRI&usqp=CAU')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}
         >
-          {/* Header - Slightly darker, matching overlay */}
-          <div className="flex items-center justify-between p-3 border-b border-white/15 bg-black/40 text-white rounded-t-xl"> {/* Adjusted header style */}
+          {/* Header */}
+          <div className="flex items-center justify-between p-3 border-b border-white/15 bg-black/40 text-white rounded-t-xl">
             <span className="font-bold flex items-center gap-2">
               <MessageCircle className="w-5 h-5" /> Trainer Assistant
             </span>
@@ -191,13 +191,12 @@ export default function Chatbot() {
               <X className="w-5 h-5" />
             </button>
           </div>
-          {/* Message Area - Adjusted bubble colors */}
+          {/* Message Area */}
           <div className="flex-1 overflow-y-auto p-3 space-y-3" style={{ maxHeight: 320 }}>
             {messages.map((msg, i) => {
               // Example: Replace with your actual rep tracking state
               const currentRep = 5; // placeholder
               const totalReps = 10; // placeholder
-              // Hypothetical: Assume you have currentRep and totalReps state
               const repProgress = msg.sender === 'bot' && msg.text.includes("rep") ? ` [${currentRep}/${totalReps}]` : '';
               
               return (
@@ -205,21 +204,19 @@ export default function Chatbot() {
                   {msg.sender === 'bot' && <span className="text-xl">🤖</span>}
                   <div className={`text-sm rounded-lg px-3 py-2 shadow-md ${msg.sender === 'bot' 
                     ? 'bg-zinc-800/70 text-white/90 rounded-bl-none' // Darker grey bot message
-                    : 'bg-red-900/60 text-white/90 rounded-br-none ml-auto'} // Muted red user message
+                    : 'bg-[#ff8000]/50 text-white/90 rounded-br-none ml-auto'} // Orange user message
                   `}>
                     {msg.text}
-                    {/* Display simple text progress */}
-                    {/* {repProgress && <span className="text-xs font-semibold text-red-300/80">{repProgress}</span>} */}
                   </div>
                   {msg.sender === 'user' && <span className="text-xl">👤</span>}
                 </div>
               );
             })}
-            {/* Typing Indicator - Adjusted color */}
+            {/* Typing Indicator */}
             {loading && (
               <div className="flex items-center gap-2">
                  <span className="text-xl">🤖</span>
-                 <div className="text-sm text-white/80 flex items-center space-x-1"> {/* Adjusted typing indicator color */}
+                 <div className="text-sm text-white/80 flex items-center space-x-1">
                     <span className="animate-pulse">.</span>
                     <span className="animate-pulse delay-150">.</span>
                     <span className="animate-pulse delay-300">.</span>
@@ -228,20 +225,20 @@ export default function Chatbot() {
             )}
             <div ref={messagesEndRef} />
           </div>
-          {/* Input Area - Adjusted style */}
+          {/* Input Area */}
           <form
-            className="flex items-start gap-2 border-t border-white/15 p-2 bg-black/50" // Use items-start for alignment with taller textarea
+            className="flex items-start gap-2 border-t border-white/15 p-2 bg-black/50"
             onSubmit={sendMessage}
           >
             <textarea
               ref={textareaRef}
-              className="flex-1 rounded-lg border border-white/20 bg-black/30 px-3 py-2 text-sm text-white/90 placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-red-600 resize-none overflow-hidden min-h-[40px] max-h-[120px]" // Added resize-none, overflow-hidden, min/max height
+              className="flex-1 rounded-lg border border-white/20 bg-black/30 px-3 py-2 text-sm text-white/90 placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-[#ff8000] resize-none overflow-hidden min-h-[40px] max-h-[120px]"
               placeholder="Type your message..."
               value={input}
-              onChange={handleInputChange} // Use the new handler
+              onChange={handleInputChange}
               disabled={loading}
               autoFocus
-              rows={1} // Start with one row
+              rows={1}
               onKeyDown={(e) => {
                 // Send message on Enter, allow Shift+Enter for newline
                 if (e.key === 'Enter' && !e.shiftKey) {
@@ -252,7 +249,7 @@ export default function Chatbot() {
             />
             <button
               type="submit"
-              className="p-2 rounded-full bg-red-800 text-white hover:bg-red-700 disabled:opacity-50 disabled:bg-zinc-600 self-end mb-[1px]" // Align button to bottom
+              className="p-2 rounded-full bg-[#ff8000] text-white hover:bg-[#f29e37] disabled:opacity-50 disabled:bg-zinc-600 self-end mb-[1px]"
               disabled={loading || !input.trim()}
               aria-label="Send"
             >
