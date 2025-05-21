@@ -81,11 +81,9 @@ const App = () => (
         <div className="relative z-10 min-h-screen">
           {/* Main content area - background is now transparent or uses card styles */}
           <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              {/* Add other routes here */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <AuthProvider>
+              <AppRoutes />
+            </AuthProvider>
           </BrowserRouter>
         </div>
       </TooltipProvider>

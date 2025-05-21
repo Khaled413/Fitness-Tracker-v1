@@ -144,8 +144,8 @@ const SignUp = () => {
               height: parseFloat(userData.height),
               weight: parseFloat(userData.weight),
               fitness_level: userData.fitnessLevel,
-              fitness_goal: userData.fitnessGoal,
-              activity_level: userData.activityLevel,
+              goal: userData.fitnessGoal,
+              daily_activity_level: userData.activityLevel,
               health_conditions: userData.healthConditions
             }
           ]);
@@ -256,8 +256,6 @@ const SignUp = () => {
             <SelectContent className="bg-[#2e333d] border-[#444] text-gray-200">
               <SelectItem value="male">Male</SelectItem>
               <SelectItem value="female">Female</SelectItem>
-              <SelectItem value="other">Other</SelectItem>
-              <SelectItem value="prefer_not_to_say">Prefer not to say</SelectItem>
             </SelectContent>
           </Select>
         </div>

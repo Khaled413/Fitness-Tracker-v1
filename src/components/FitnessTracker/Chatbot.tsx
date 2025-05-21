@@ -230,37 +230,23 @@ export default function Chatbot() {
           </div>
           {/* Input Area - Adjusted style */}
           <form
-<<<<<<< HEAD
-            className="flex items-center gap-2 border-t border-white/15 p-2 bg-black/50" // Adjusted input area style
-            onSubmit={e => { e.preventDefault(); sendMessage(); }}
-            >
-            <textarea
-              className="flex-1 rounded-lg border border-white/20 bg-black/30 px-3 py-2 text-sm text-white/90 placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-red-600 resize-none overflow-y-auto" // Added resize-none and overflow-y-auto
-=======
             className="flex items-start gap-2 border-t border-white/15 p-2 bg-black/50" // Use items-start for alignment with taller textarea
-            onSubmit={sendMessage} // Use the updated sendMessage
+            onSubmit={sendMessage}
           >
             <textarea
               ref={textareaRef}
               className="flex-1 rounded-lg border border-white/20 bg-black/30 px-3 py-2 text-sm text-white/90 placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-red-600 resize-none overflow-hidden min-h-[40px] max-h-[120px]" // Added resize-none, overflow-hidden, min/max height
->>>>>>> 9ba3ab40e59e9cd9e92d2f124a8674854e9f7691
               placeholder="Type your message..."
               value={input}
               onChange={handleInputChange} // Use the new handler
               disabled={loading}
-<<<<<<< HEAD
               autoFocus
-              rows={1}
-              style={{ minHeight: '40px', maxHeight: '120px' }} // Set min and max height
-              onKeyDown={(e) => {
-=======
               rows={1} // Start with one row
               onKeyDown={(e) => {
                 // Send message on Enter, allow Shift+Enter for newline
->>>>>>> 9ba3ab40e59e9cd9e92d2f124a8674854e9f7691
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault();
-                  sendMessage();
+                  sendMessage(e);
                 }
               }}
             />
