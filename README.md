@@ -1,5 +1,6 @@
-![image](https://github.com/user-attachments/assets/f2245f29-8c4d-4712-b596-a35865ad771b)
 # 💪 Fitness Tracker Web
+
+![screencapture-localhost-8081-2025-05-21-07_16_30](https://github.com/user-attachments/assets/200a95f5-03dd-4aed-a646-5508e870fca4)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/09b6c732-0cd9-40d5-a38d-1de569dd051b" alt="Live Demo Screenshot" width="600">
