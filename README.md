@@ -1,7 +1,8 @@
+![image](https://github.com/user-attachments/assets/f2245f29-8c4d-4712-b596-a35865ad771b)
 # 💪 Fitness Tracker Web
 
 <p align="center">
-![image](https://github.com/user-attachments/assets/12f95fac-94ca-49b4-8ab6-8ad232bd367e)
+  <img src="https://github.com/user-attachments/assets/09b6c732-0cd9-40d5-a38d-1de569dd051b" alt="Live Demo Screenshot" width="600">
 </p>
 
 > A real-time fitness tracking web application that uses TensorFlow.js and pose detection to monitor exercise form, count repetitions, and provide feedback — all through your webcam!
